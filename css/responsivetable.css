@@ -1,0 +1,286 @@
+/*
+ * jQuery Basic Table
+ * Author: Jerry Low
+ */
+
+table.bt thead,
+table.bt tbody th {
+    display: none;
+}
+
+table.bt tfoot th,
+table.bt tfoot td,
+table.bt tbody td {
+    border: none;
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    vertical-align: top;
+
+    /* IE 9 */
+    float: left\9;
+    width: 100%\9;
+}
+
+table.bt tfoot th::before,
+table.bt tfoot td::before,
+table.bt tbody td::before {
+    content: attr(data-th) ": ";
+    display: inline-block;
+    -webkit-flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    flex-shrink: 0;
+    font-weight: bold;
+    width: 6.5em;
+}
+table.cart tbody td:first-child::before,
+table.cart tbody td:last-child::before {
+    content: attr(data-th) " ";
+}
+
+table.bt tfoot th.bt-hide,
+table.bt tfoot td.bt-hide,
+table.bt tbody td.bt-hide {
+    display: none;
+}
+
+table.bt tfoot th .bt-content,
+table.bt tfoot td .bt-content,
+table.bt tbody td .bt-content {
+    vertical-align: top;
+}
+.shop_table .bt-content {
+    display: block;
+    width: 100%;
+    vertical-align: top;
+}
+.shop_table .bt-content .product-thumbnail, .shop_table .bt-content .product-detail {
+    display: inline-block;
+    vertical-align: top;
+}
+.bt-wrapper.active {
+    max-height: 310px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/*
+ * Basic Table CSS.
+ */
+
+@media only screen and (max-width: 979px) {
+    table tr:nth-of-type(even) {
+        background: #f1f1f1;
+    }
+
+}
+@media only screen and (max-width: 979px) {
+    .phone-block {
+        display: block;
+    }
+
+    .phone-hide {
+        display: none;
+    }
+}
+
+code {
+    background: #c6d8d8;
+    border-radius: 5px;
+    color: #3d6969;
+    display: block;
+    margin: 2em 0;
+    padding: 15px;
+    position: relative;
+}
+
+code:after {
+    bottom: 5px;
+    color: #e4ebeb;
+    position: absolute;
+    right: 10px;
+    text-transform: uppercase;
+}
+
+code.css:after {
+    content: 'css';
+}
+
+code.js:after {
+    content: 'js';
+}
+
+table {
+    background: white;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table tr,
+table th,
+table td {
+    border: none;
+}
+@media only screen and (max-width: 979px)  {
+    table,
+    table tr,
+    table th,
+    table td,
+    tbody {
+        display: block;
+    }
+
+}
+
+table th,
+table td {
+    text-align: left;
+}
+
+table.bt tfoot th,
+table.bt tfoot td,
+table.bt tbody td {
+    padding: 0;
+}
+
+table.bt tfoot th:before,
+table.bt tfoot td:before,
+table.bt tbody td:before {
+    /*  background: #56a2cf;
+      color: white;*/
+    margin-right: 10px;
+    padding: 2px 10px;
+}
+
+table.bt tfoot th .bt-content,
+table.bt tfoot td .bt-content,
+table.bt tbody td .bt-content {
+    display: inline-block;
+    padding: 2px 5px;
+}
+
+/*
+ * Example 2:
+ * Container breakpoint
+ */
+.clearfix::before,
+.clearfix::after {
+    content: " ";
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+@media (min-width: 979px) {
+    .col-sm-3,
+    .col-sm-9 {
+        float: left;
+    }
+
+    .col-sm-3 {
+        padding-left: 2em;
+        width: 25%;
+    }
+    .col-sm-9 {
+        width: 75%;
+    }
+}
+
+/*
+ * Example 5:
+ * Media query over js resize
+ */
+@media only screen and (max-width: 979px) {
+    #table-no-resize thead {
+        display: none;
+    }
+
+    #table-no-resize tbody td {
+        border: none;
+        display: block;
+        font-size: .8125rem;
+        padding: 0;
+        vertical-align: top;
+
+        /* IE 9 */
+        float: left\9;
+        width: 100%\9;
+    }
+
+    #table-no-resize tbody td:before {
+        content: attr(data-th) ": ";
+        color: white;
+        display: inline-block;
+        font-weight: bold;
+        margin-right: 10px;
+        padding: 2px 10px;
+        width: 6.5em;
+    }
+
+    #table-no-resize tbody td .bt-content {
+        display: inline-block;
+        padding: 2px 5px;
+    }
+
+    #table-no-resize tbody td:first-of-type:before,
+    #table-no-resize tbody td:first-of-type .bt-content {
+        padding-top: 10px;
+    }
+
+    #table-no-resize tbody td:last-of-type:before,
+    #table-no-resize tbody td:last-of-type .bt-content {
+        padding-bottom: 10px;
+    }
+}
+
+/*
+ * Example 6:
+ * Two axis styling
+ */
+table.two-axis tr td:first-of-type {
+    background: #cadde1;
+}
+
+@media only screen and (max-width: 979px) {
+    table.two-axis tr td:first-of-type,
+    table.two-axis tr:nth-of-type(2n+2) td:first-of-type,
+    table.two-axis tr td:first-of-type:before {
+        background: #3584b3;
+        color: #ffffff;
+    }
+
+    table.two-axis tr td:first-of-type {
+        border-bottom: 1px solid #e4ebeb;
+    }
+
+    table.two-axis tr td:first-of-type:before {
+        padding-bottom: 10px;
+    }
+}
+
+/*
+ * Example 7:
+ * Max height
+ */
+.bt-wrapper.active {
+    margin-top: 1.5em;
+}
+.bt-wrapper.active table {
+    margin: 0;
+}
+table {
+    width: 100%;
+}
+.table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+}
+.table caption {
+    line-height: 1;
+    text-align: center;
+}

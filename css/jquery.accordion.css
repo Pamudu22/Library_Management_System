@@ -1,0 +1,43 @@
+/*!
+ * jQuery Accordion 0.0.1
+ * (c) 2014 Victor Fernandez <victor@vctrfrnndz.com>
+ * MIT Licensed.
+ */
+
+/* Requirements */
+
+[data-accordion] [data-content] {
+    overflow: hidden;
+    max-height: 0;
+}
+
+.open [data-content] [data-accordion]:last-child h5 {
+    margin-bottom: 0;
+}
+
+.open [data-content] .open[data-accordion]:last-child h5 {
+    margin-bottom: 30px;
+}
+/* Basic Style */
+
+[data-accordion] [data-control] {
+    cursor: pointer;
+    position: relative;
+}
+
+[data-accordion] > [data-control]:after {
+    content: "\f0d7";
+    font-family: FontAwesome;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    font-weight: 400;
+    color: #a1a1a1;
+    font-size: 14px;
+}
+
+[data-accordion].open > [data-control]:after {
+    -webkit-transform: rotate(-180deg); 
+    -ms-transform: rotate(-180deg); 
+    transform: rotate(-180deg); 
+}

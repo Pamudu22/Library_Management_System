@@ -1,0 +1,12 @@
+{
+    "name": "pamudu/lowa-state-library",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Pamudu\\LowaStateLibrary\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.2"
+    }
+}

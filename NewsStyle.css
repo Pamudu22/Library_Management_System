@@ -1,0 +1,130 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.news-item {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #ec3001;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item h2 {
+    color: #ec3001;
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.K2FeedImage {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.K2FeedImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.K2FeedIntroText p {
+    line-height: 1.7;
+    text-align: justify;
+    font-size: 1.3em;
+    color: #555;
+}
+
+.news-details {
+    font-size: 1em;
+    color: #555;
+    margin-top: 15px;
+}
+
+.news-details p {
+    margin: 5px 0;
+}
+
+.news-details strong {
+    color: #ec3001;
+}
+
+#newsContainer {
+    text-align: center;
+    background-size: cover;
+    padding: 20px;
+    background-color: #ec3001;
+    color: #fff;
+}
+
+#newsContainer:hover #title {
+    transform: scale(1.2);
+}
+
+#ButtonN {
+    background-color: #333;
+    padding: 15px 30px;
+    margin: 20px 0;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+#ButtonN:hover {
+    background-color: #fff;
+    color: #ec3001;
+    border: 2px solid #ec3001;
+}
+
+#title {
+    color: #fff;
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .news-item h2 {
+        font-size: 2em;
+    }
+    .K2FeedIntroText p {
+        font-size: 1.1em;
+    }
+    .news-details {
+        font-size: 0.9em;
+    }
+}
